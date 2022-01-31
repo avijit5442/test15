@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script>
+            let a=0;
+            let b=0;
+            let i=0;
+            function main(){
+                var out=setInterval(progress,1000)
+                function progress(){
+                if(b>50)
+                {clearInterval(out)}
+                else
+                {a=a+10;
+                 b=Number(i)+Number(a)
+                 if(b==0 || b==undefined)
+                 {document.getElementsByClassName('progress-bar')[0].style.width='0%'
+                  }
+                  else if(b==10)
+                  {document.getElementsByClassName('progress-bar')[0].style.width=`10%`
+                }
+                else if(b==20)
+                  {document.getElementsByClassName('progress-bar')[0].style.width=`20%`
+                }
+                else if(b==30)
+                  {document.getElementsByClassName('progress-bar')[0].style.width=`30%`
+                }
+                else if(b==40)
+                  {document.getElementsByClassName('progress-bar')[0].style.width=`40%`
+                }
+                else if(b==50)
+                  {document.getElementsByClassName('progress-bar')[0].style.width=`50%`
+                }
+            }
+          }
+        }
+        </script>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%">
+            <span id="data"></span></div>
+        </div>
+        <script>
+          window.onload=main()
+        </script>
+    </body>
+</html>
